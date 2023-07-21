@@ -28,15 +28,15 @@ The `initial` configuration splits out `lodash` into a separate bundle—`486.js
 
 ### `maxSize`
 
-This configuration uses `chunks: all` and `maxSize: 20000`. The output consists of `main.js`, `form-validation.js`, `admin.js`, and 3 common chunks—`486.js`, `134.js`, and `407.js`. On page load it downloads `main.js` (34.6 KB) and `486.js` (545 KB). On interaction with the form element it downloads `form-validation.js` (20.6 KB), `407.js` (22.7 KB), and `134.js` (24.6 KB).
-
 ![maxSize](https://github.com/kevinfarrugia/learn-performance-webpack-code-splitting/assets/8075326/27a7e34c-ad17-4623-921c-eaab6fb2751a)
+
+This configuration uses `chunks: all` and `maxSize: 20000`. The output consists of `main.js`, `form-validation.js`, `admin.js`, and 3 common chunks—`486.js`, `134.js`, and `407.js`. On page load it downloads `main.js` (34.6 KB) and `486.js` (545 KB). On interaction with the form element it downloads `form-validation.js` (20.6 KB), `407.js` (22.7 KB), and `134.js` (24.6 KB).
 
 ### `false`
 
-Disables `SplitChunksPlugin`. The output is `main.js`, `form-validation.js`, and `admin.js`. `date-fns` and `uuid` are duplicated in the dynamic imports and `lodash` is included in `main.js`. On page load it downloads `main.js` (577 KB).On interaction with the form element it downloads `form-validation.js` (64.3 KB). **(not recommended)**
-
 ![false](https://github.com/kevinfarrugia/learn-performance-webpack-code-splitting/assets/8075326/8e1e9ba1-9aaa-49ba-9383-48557bd3c206)
+
+Disables `SplitChunksPlugin`. The output is `main.js`, `form-validation.js`, and `admin.js`. `date-fns` and `uuid` are duplicated in the dynamic imports and `lodash` is included in `main.js`. On page load it downloads `main.js` (577 KB).On interaction with the form element it downloads `form-validation.js` (64.3 KB). **(not recommended)**
 
 ## Resources
 

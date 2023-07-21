@@ -14,10 +14,29 @@
 
 ## Configurations
 
-- `async`: The default webpack configuration. It splits out common modules `date-fns` and `uuid` into a separate bundle.
-- `initial`: The `initial` configuration splits out `lodash` into a separate bundle but `date-fns` and `uuid` are duplicated into the dynamic imports `form-validation.js` and `admin.js`.
-- `maxSize`: This configuration uses `chunks: all` and `maxSize: 20000`. The output is 3 common chunks, `main.js`, `form-validation.js`, and `admin.js`.
-- `false`: Disables `SplitChunksPlugin`. The output is `main.js`, `form-validation.js`, and `admin.js`. `date-fns` and `uuid` are duplicated in the dynamic imports and `lodash` is included in `main.js`. (not recommended)
+### `async`
+
+The default webpack configuration. It splits out common modules `date-fns` and `uuid` into a separate bundle.
+
+![async](https://github.com/kevinfarrugia/learn-performance-webpack-code-splitting/assets/8075326/732edd46-b5cc-4dcf-9658-f57b03327ea7)
+
+### `initial`
+
+The `initial` configuration splits out `lodash` into a separate bundle but `date-fns` and `uuid` are duplicated into the dynamic imports `form-validation.js` and `admin.js`.
+
+![initial](https://github.com/kevinfarrugia/learn-performance-webpack-code-splitting/assets/8075326/634c9800-fbf4-43b6-8971-6fda1c8ede72)
+
+### `maxSize`
+
+This configuration uses `chunks: all` and `maxSize: 20000`. The output is 3 common chunks, `main.js`, `form-validation.js`, and `admin.js`.
+
+![maxSize](https://github.com/kevinfarrugia/learn-performance-webpack-code-splitting/assets/8075326/27a7e34c-ad17-4623-921c-eaab6fb2751a)
+
+### `false`
+
+Disables `SplitChunksPlugin`. The output is `main.js`, `form-validation.js`, and `admin.js`. `date-fns` and `uuid` are duplicated in the dynamic imports and `lodash` is included in `main.js`. (not recommended)
+
+![false](https://github.com/kevinfarrugia/learn-performance-webpack-code-splitting/assets/8075326/8e1e9ba1-9aaa-49ba-9383-48557bd3c206)
 
 ## Resources
 
